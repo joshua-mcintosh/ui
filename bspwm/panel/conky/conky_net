@@ -1,0 +1,37 @@
+out_to_x yes
+out_to_console no
+background yes
+
+own_window yes
+own_window_class conky_net
+own_window_type panel
+own_window_argb_visual yes
+own_window_argb_value 240
+double_buffer yes
+
+minimum_size 220 120
+alignment top_right
+gap_x 20
+gap_y 19
+
+own_window_colour 000000
+default_color dadada
+
+use_xft yes
+xftfont Tewi:size=7
+draw_shades no
+
+update_interval 5
+
+TEXT
+${upspeedgraph eth0 15}
+${alignc}▲ ${upspeed eth0}
+
+${voffset -5}${downspeedgraph eth0 15}
+${alignc}▼ ${downspeed eth0}
+${stippled_hr}
+${alignc}IP: ${addr eth0}
+${alignc}SSID: ${wireless_essid eth0}
+${alignc}GW: ${gw_ip}
+${alignc}NS: ${nameserver 0}
+${alignc}NS: ${nameserver 1}

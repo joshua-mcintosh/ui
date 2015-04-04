@@ -1,0 +1,46 @@
+#
+# wm independent hotkeys
+#
+
+XF86AudioPlay
+	ncmpcpp toggle
+
+XF86AudioPrev
+	ncmpcpp prev
+
+XF86AudioNext
+	ncmpcpp next
+
+XF86AudioStop
+	ncmpcpp stop
+
+XF86Audio{Raise,Lower}Volume
+	amixer -q sset Master 5%{+,-} unmute
+
+XF86AudioMute
+	amixer -q sset Master toggle
+
+shift + XF86Audio{Raise,Lower}Volume
+	mpc volume {+,-}5%
+
+super + F1
+    ~/.config/bspwm/panel/scripts/toggle_conky net
+
+super + F2
+    ~/.config/bspwm/panel/scripts/toggle_conky disk
+
+super + F3
+    ~/.config/bspwm/panel/scripts/toggle_conky mem
+
+super + F4
+    ~/.config/bspwm/panel/scripts/toggle_conky cpu
+
+super + F7
+    ~/.config/bspwm/panel/scripts/toggle_conky cal
+
+ctrl + alt + l
+	xautolock -locknow
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd

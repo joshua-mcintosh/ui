@@ -1,0 +1,11 @@
+#!/bin/bash
+
+icon=""
+
+drop="$(dropbox status)"
+drop_upd="$(echo $drop |grep -v 'Up to date')"
+
+if [[ "$drop_upd" != '' ]]
+then
+    echo " $icon"
+fi

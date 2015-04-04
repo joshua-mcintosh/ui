@@ -1,0 +1,61 @@
+#! /bin/sh
+#
+# Example panel for LemonBoy's bar
+
+logo="%{l}%{B#FFcccccc}%{F#FF768fec}%{A:~/.config/bspwm/panel/scripts/spawn_dmenu:} $(hostname -s) %{F#FFcccccc}%{B#FF222222}⮀%{A}"
+while read -r line ; do
+	case $line in
+	S*)
+		sys_infos="%{r}${line#?}"
+	;;
+	T*)
+		title=" %{B#FF769fec}${line#?} "
+	;;
+	W*)
+		wm_infos="%{B#FF222222} "
+		IFS=':'
+		set -- ${line#?}
+		while [ $# -gt 0 ] ; do
+			item=$1
+			name=${item#?}
+			case $item in
+			[OFU]*)
+				# active desktop
+				#wm_infos="$wm_infos%{B#FF222222}%{F#FFf39d21}%{A:bspc desktop -f ${name}:} •%{A}"
+				wm_infos="$wm_infos%{B#FF222222}%{F#FFf39d21}%{A:bspc desktop -f ${name}:} ${name}%{A}"
+			;;
+			o*)
+				# inactive but occupied desktop
+				#wm_infos="$wm_infos%{B#FF222222}%{F#FFffffff}%{A:bspc desktop -f ${name}:} •%{A}"
+				wm_infos="$wm_infos%{B#FF222222}%{F#FFffffff}%{A:bspc desktop -f ${name}:} ${name}%{A}"
+			;;
+			f*)
+				# inactive desktop
+				#wm_infos="$wm_infos%{B#FF222222}%{F#FF999999}%{A:bspc desktop -f ${name}:} ○%{A}"
+				wm_infos="$wm_infos%{B#FF222222}%{F#FF999999}%{A:bspc desktop -f ${name}:} ${name}%{A}"
+			;;
+			u*)
+				# urgent desktop
+				#wm_infos="$wm_infos%{B#FF222222}%{F#FFeeeeee}%{A:bspc desktop -f ${name}:} •%{A}"
+				wm_infos="$wm_infos%{B#FF222222}%{F#FFeeeeee}%{A:bspc desktop -f ${name}:} ${name}%{A}"
+			;;
+			L*)
+				# layout
+				case $name in
+				t*)
+					layout=""
+				;;
+				m*)
+					layout=""
+				;;
+				esac
+				wm_infos="$wm_infos%{B#FF222222}%{F#FFeeeeee} ⮁ %{A:bspc desktop -l next:}$layout%{A} %{F#FF222222}%{B#FF769fec}⮀%{F-}%{B#FF769fec}"
+			;;
+			esac
+			shift
+		done
+	;;
+	esac
+	#printf "%s\n" "$logo $wm_infos $title $sys_infos "
+	printf "%s\n" "$wm_infos $title $sys_infos"
+done

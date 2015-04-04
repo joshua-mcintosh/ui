@@ -1,0 +1,29 @@
+out_to_x yes
+out_to_console no
+background yes
+
+own_window yes
+own_window_class conky_batt
+own_window_type panel
+own_window_argb_visual yes
+own_window_argb_value 240
+double_buffer yes
+
+minimum_size 220 60
+alignment top_right
+gap_x 20
+gap_y 19
+
+own_window_colour 000000
+default_color dadada
+
+use_xft yes
+xftfont Tewi:size=7
+draw_shades no
+
+update_interval 5
+
+TEXT
+${battery_percent}% ${if_match ${battery_percent} < 20}${color ff005f}${endif}${battery_bar}${color}
+
+${exec acpi -i |head -1 |sed -e 's/Battery 0: //'}

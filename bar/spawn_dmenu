@@ -1,0 +1,14 @@
+#!/bin/sh
+
+pkill -x dmenu
+xdotool search --class conky windowunmap %@
+dmenu_run -l 20 \
+	-w 200 \
+	-y 0 \
+	-x 144\
+	-fn -*-terminus-medium-r-normal-*-12-*-*-*-*-60-iso10646-* \
+	-nb '#222222' \
+	-nf '#dadada' \
+	-sf '#dadada' \
+	-sb '#5f87af' #\
+#	 2>/dev/null

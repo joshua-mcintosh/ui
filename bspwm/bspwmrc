@@ -1,0 +1,30 @@
+#! /bin/sh
+
+#bspc monitor -d ➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓
+bspc monitor -d a b c d e f g h i k
+
+bspc config border_width        2
+bspc config window_gap          12
+bspc config split_ratio         0.52
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+
+bspc config top_padding 14
+bspc config bottom_padding 2
+
+bspc rule -a Gimp desktop=^8 follow=on floating=on
+bspc rule -a Chromium desktop=^2
+bspc rule -a Google-chrome desktop=^2
+bspc rule -a Firefox desktop=^2
+bspc rule -a Iceweasel desktop=^2
+bspc rule -a Surf desktop=^2
+bspc rule -a Screenkey manage=off
+bspc rule -a crx_nckgahadagoaajjgafhacjanaoiihapd floating=on
+
+rm -f $PANEL_FIFO
+mkfifo $PANEL_FIFO
+sxhkd ~/.config/sxhkd/bspwm&
+xcompmgr &
+xscreensaver &
+xautolock -locker 'xscreensaver-command -lock' -time 15 &
+(sleep 2 && ~/.config/bspwm/panel/panel ) &

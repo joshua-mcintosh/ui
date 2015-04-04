@@ -1,0 +1,42 @@
+#!/bin/bash
+
+icon_plugged=''
+icon_full=''
+icon_med=''
+icon_low=''
+icon=""
+pstat="$(acpi -b)"
+
+charging="$(echo $pstat | cut -d' ' -f3)"
+charging="${charging%,}"
+
+percent="$(echo $pstat | cut -d' ' -f4)"
+percent="${percent%\%,}"
+
+if [[ $charging = "Full" || $charging = "Charging" && $percent -ge 94 ]]
+then
+    echo ""
+    exit 0
+fi
+
+if [[ $charging = "Charging" ]]
+then
+    icon="%{F#FF00FF99}$icon_plugged"
+
+elif [[ $percent -le 25 ]]
+then
+    if [[ $percent -le 16 ]]
+    then
+        icon="%{B#FFFF0000}"
+    else
+        icon="%{B#FFFFFF00}%{F#FF000000}"
+    fi
+    icon="$icon$icon_low"
+
+elif [[ $percent -gt 80 ]]
+then
+    icon="$icon_full"
+else
+    icon="$icon_med"
+fi
+echo " $icon"

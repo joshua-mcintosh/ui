@@ -1,0 +1,28 @@
+#! /bin/sh
+cd $(dirname $0)
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+    printf "%s\n" "The panel is already running." >&2
+    exit 1
+fi
+
+barfont2="-*-terminus-medium-r-normal-*-12-*-*-*-*-60-iso10646-*"
+barfont1="-*-stlarch-*-*-*-*-*-*-*-*-*-*-*-*"
+barfont="-f $barfont1,$barfont2"
+bargeom="-g 1805x14"
+barbg="-B #FF769fec"
+baropts="-p $bargeom $barfont $barbg"
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+bspc control --subscribe > "$PANEL_FIFO" &
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
+echo "T" >  "$PANEL_FIFO" &
+echo "S" >  "$PANEL_FIFO" &
+conky -c ./panel_conky_$(hostname -s) |while read -r line; do echo "S$line"; done > "$PANEL_FIFO" &
+trayer --edge top --align right --width 6 --height 14 --transparent true --alpha 00 --tint 0xbd1900 &
+
+cat "$PANEL_FIFO" | ./panel_bar | bar $baropts |while read -r line; do
+    echo "$line" &&
+    bash -c "$line"
+done
