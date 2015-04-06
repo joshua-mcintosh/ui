@@ -1,0 +1,214 @@
+Xcursor.theme: redglass
+
+XTerm*rightScrollBar: off
+XTerm*savelines: 1000
+!Xterm*geometry: 80x40
+URxvt*geometry: 204x52
+!XTerm*background: #222222
+!XTerm*foreground: #bbbbbb
+!XTerm*colorMode:  on
+!XTerm*dynamicColors:  on
+!XTerm*underLine:  off
+!XTerm*colorBDMode: on
+!!XTerm*colorBD: cyan
+!XTerm*colorULMode: on
+!!XTerm*colorUL: magenta
+!XTerm*customization: -color
+!XTerm*reverseWrap: true
+!!XTerm*faceName:         Terminus:pixelsize=16
+!!XTerm*faceName:     Terminus
+!!XTerm*faceSize:     16
+!XTerm*font: -*-terminus-medium-*-*-*-*-150-*-*-*-*-iso8859-1
+!!XTerm*font: -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!XTerm*font:             -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!XTerm*boldFont:         -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!XTerm*italicFont:       -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!XTerm*boldItalicFont:   -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+urxvt*termName:rxvt-unicode-256color
+urxvt*saveLines: 600
+urxvt*background: #212021
+!urxvt*mouseWheelScrollPage: false
+
+!! dont use with tinting
+!!urxvt*shading: 50 
+
+!!urxvt*transparent: true
+!urxvt*inheritPixmap: true
+!urxvt*fading: 40
+urxvt*scrollBar: false
+!urxvt*borderLess: true
+!urxvt*colorBDMode: on
+!urxvt*colorULMode: on
+!urxvt*blurRadius: 125
+urxvt*urgentOnBell: true
+urxvt.urlLauncher: firefox
+urxvt*matcher.Button: 3
+urxvt*modifier: alt
+urxvt*cutchars: `"()'*<>[]{|}
+!
+!### Compiz options ###
+!#urxvt*depth: 32
+!#urxvt*background: rgba:0000/0000/0000/dddd
+!
+!## Tint Color ###
+!URxvt*tintColor: Blue
+!URxvt*tintColor: lightblue
+!URxvt*tintColor: Deepskyblue
+!URxvt*tintColor: lightgreen
+!URxvt*tintColor: Lightseagreen
+!URxvt*tintColor: Mediumblue
+!URxvt*tintColor: White
+!
+!### Fonts ###
+!!urxvt*font: xft:Bitstream Vera Sans mono:size=14
+!!urxvt*font: xft:terminus:pixelsize=20:bold
+!!urxvt*font: xft:DejaVu Sans Mono:pixelsize=18
+!!urxvt*font: -*-tewi-medium-r-normal--14-*-*-*-*-*-iso10646-*
+!!urxvt*boldFont: -*-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
+!!urxvt*font: -xos4-terminus-medium-r-normal-*-19-*-*-*-*-*-*-*
+!!urxvt*font: -*-ohsnap-medium-r-*-*-12-*-*-*-*-*-*-*
+!!urxvt*font: -*-dina-medium-r-*-*-17-*-*-*-*-*-*-*
+!!urxvt*font:             -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!urxvt*boldFont:         -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!urxvt*italicFont:       -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!urxvt*boldItalicFont:   -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!urxvt*font:             -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!urxvt*boldFont:         -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!urxvt*italicFont:       -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!urxvt*boldItalicFont:   -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+rxvt*termName:rxvt-unicode-256color
+rxvt*saveLines: 600
+rxvt*background: #212021
+!rxvt*mouseWheelScrollPage: false
+
+!! dont use with tinting
+!!rxvt*shading: 50 
+
+!!rxvt*transparent: true
+!rxvt*inheritPixmap: true
+!rxvt*fading: 40
+rxvt*scrollBar: false
+!rxvt*borderLess: true
+!rxvt*colorBDMode: on
+!rxvt*colorULMode: on
+!rxvt*blurRadius: 125
+rxvt*urgentOnBell: true
+rxvt.urlLauncher: firefox
+rxvt*matcher.Button: 3
+rxvt*modifier: alt
+rxvt*cutchars: `"()'*<>[]{|}
+!
+!### Compiz options ###
+!#rxvt*depth: 32
+!#rxvt*background: rgba:0000/0000/0000/dddd
+!
+!## Tint Color ###
+!rxvt*tintColor: Blue
+!rxvt*tintColor: lightblue
+!rxvt*tintColor: Deepskyblue
+!rxvt*tintColor: lightgreen
+!rxvt*tintColor: Lightseagreen
+!rxvt*tintColor: Mediumblue
+!rxvt*tintColor: White
+!
+!### Fonts ###
+!!rxvt*font: xft:Bitstream Vera Sans mono:size=14
+!!rxvt*font: xft:terminus:pixelsize=20:bold
+!!rxvt*font: xft:DejaVu Sans Mono:pixelsize=18
+URxvt*font: xft:Ubuntu Mono:pixelsize=14
+!!rxvt*font: -xos4-terminus-medium-r-normal-*-19-*-*-*-*-*-*-*
+!!rxvt*font: -*-ohsnap-medium-r-*-*-12-*-*-*-*-*-*-*
+!!rxvt*font: -*-dina-medium-r-*-*-17-*-*-*-*-*-*-*
+!!rxvt*font:             -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!rxvt*boldFont:         -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!rxvt*italicFont:       -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!rxvt*boldItalicFont:   -*-fixed-medium-r-*-*-18-*-*-*-*-*-iso8859-*
+!!rxvt*font:             -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!rxvt*boldFont:         -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!rxvt*italicFont:       -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2
+!!rxvt*boldItalicFont:   -*-courier new-medium-r-*-*-19-*-*-*-*-*-iso8859-2!
+dzen2.foreground: white
+dzen2.background: #005573
+dzen2.font: xft:Inconsolata for Powerline:Medium:pixelsize=12:antialias=true:hinting=true
+
+!! ---| xpdf |--- {{{
+!xpdf*enableFreetype: yes
+!xpdf*antialias: yes
+!xpdf*foreground: black
+!xpdf*background: white
+!xpdf*urlCommand: links -g %s
+!xpdf*viKeys: on
+!! }}}
+!! Hybrid Terminal Colours
+ 
+! Tomorrow-Night Palette
+#define t_background #1D1F21
+#define t_current_line #282A2E
+#define t_selection #373B41
+#define t_foreground #C5C8C6
+#define t_comment #707880
+#define t_red #CC6666
+#define t_orange #DE935F
+#define t_yellow #F0C674
+#define t_green #B5BD68
+#define t_aqua #8ABEB7
+#define t_blue #81A2BE
+#define t_purple #B294BB
+ 
+!!*background: t_background
+!!*foreground: t_foreground
+!!! black
+!!*color0: t_current_line
+!!*color8: t_selection
+!!! red
+!!*color1: #A54242
+!!*color9: t_red
+!!! green
+!!*color2: #8C9440
+!!*color10: t_green
+!!! yellow
+!!*color3: t_orange
+!!*color11: t_yellow
+!!! blue
+!!*color4: #5F819D
+!!*color12: t_blue
+!!! magenta
+!!*color5: #85678F
+!!*color13: t_purple
+!!! cyan
+!!*color6: #5E8D87
+!!*color14: t_aqua
+!!! white
+!!*color7: t_comment
+!!*color15: t_foreground
+
+URxvt.foreground:       #D7D0C7
+URxvt.background:       #151515
+! Black
+URxvt.color0:           #303030
+URxvt.color8:           #404040
+! Red
+URxvt.color1:           #E84F4F
+URxvt.color9:           #D23D3D
+! Green
+URxvt.color2:           #B8D68C
+URxvt.color10:          #A0CF5D
+! Yellow
+URxvt.color3:           #E1AA5D
+URxvt.color11:          #F39D21
+! Blue
+URxvt.color4:           #7DC1CF
+URxvt.color12:          #4E9FB1
+! Magenta
+URxvt.color5:           #9B64FB
+URxvt.color13:          #8542FF
+! Cyan
+URxvt.color6:           #6D878D
+URxvt.color14:          #42717B
+! White
+URxvt.color7:           #dddddd
+URxvt.color15:          #dddddd
+!! vim: ft=xdefaults
