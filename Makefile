@@ -3,7 +3,9 @@ SHELL = /bin/bash
 DEFAULT = xmonad
 .PHONY: all clean dmenu symlink-xmonad sxhkd wipe-wm xdefaults xsession
 
-all: symlink-$(DEFAULT) dmenu xdefaults xsession completed
+all: install
+
+install: symlink-$(DEFAULT) dmenu xdefaults xsession completed
 
 completed:
 	@echo "UI make completed"
