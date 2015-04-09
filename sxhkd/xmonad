@@ -1,5 +1,5 @@
 super + p
-	/usr/local/google/home/jmcintosh/.dotfiles/bar/spawn_dmenu
+	/usr/local/google/home/jmcintosh/.dotfiles/ui/bar/spawn_dmenu
 
 super + shift + p
   lighthouse |sh

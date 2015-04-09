@@ -47,4 +47,4 @@ confdir:
 
 
 wipe-wm:
-	@unlink ${HOME}/.wm;
+	@unlink ${HOME}/.wm 2>/dev/null || true;
