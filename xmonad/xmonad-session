@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# necessary to make chrome pick up the proxy settings stored in gconf.
+export DESKTOP_SESSION=gnome
+
+Disable audible bell
+xset -b
+xset +fp /usr/local/share/fonts
+xset fp rehash
+
+export GTK_IM_MODULE=xim
+
+if [ -x $HOME/.autostart ]
+then
+  source $HOME/.autostart
+fi
+
+sxhkd ~/.config/sxhkd/xmonad &
+
+exec xmonad
