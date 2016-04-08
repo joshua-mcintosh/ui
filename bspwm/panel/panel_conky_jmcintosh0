@@ -19,6 +19,6 @@ ${if_match ${memperc} > 75}%{F\#FFFF0000}${endif}\
 ${if_match ${cpu cpu0} > 30}\
 ${if_match ${cpu cpu0} > 75}%{F\#FFFF0000}${endif}\
 %{A:${template0 cpu}:}  %{A}%{F\#FFffffff}${endif}\
-${exec $HOME/.dotfiles/wm/bspwm.config/panel/scripts/panel_volume} \
+${exec $HOME/.dotfiles/ui/bspwm/panel/scripts/panel_volume} \
 %{F\#FFbd1900}⮂%{B\#FFbd1900}%{F\#FF222222}%{A:${template0 cal}:}  \
 ${time %H:%M}%{A} %{B-}

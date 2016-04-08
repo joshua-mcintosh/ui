@@ -3,3 +3,7 @@ super + p
 
 super + shift + p
   lighthouse |sh
+
+ctrl + alt + l
+	xautolock -locknow
+

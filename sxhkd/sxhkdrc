@@ -23,24 +23,6 @@ XF86AudioMute
 shift + XF86Audio{Raise,Lower}Volume
 	mpc volume {+,-}5%
 
-super + F1
-    ~/.config/bspwm/panel/scripts/toggle_conky net
-
-super + F2
-    ~/.config/bspwm/panel/scripts/toggle_conky disk
-
-super + F3
-    ~/.config/bspwm/panel/scripts/toggle_conky mem
-
-super + F4
-    ~/.config/bspwm/panel/scripts/toggle_conky cpu
-
-super + F7
-    ~/.config/bspwm/panel/scripts/toggle_conky cal
-
-ctrl + alt + l
-	xautolock -locknow
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
